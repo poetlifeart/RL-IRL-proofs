@@ -1,1 +1,28 @@
+---
+layout: default
+---
+
+# RL‑IRL Reading Group
+
+## Papers
+
+<ul>
+{% for f in site.static_files %}
+  {% if f.path contains "/docs/papers/" and f.extname == ".pdf" %}
+    {% assign name = f.path | split: "/" | last %}
+    <li><a href="papers/{{ name }}">{{ name }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
+
+## Proofs
+
+<ul>
+{% for f in site.static_files %}
+  {% if f.path contains "/docs/proofs/" and f.extname == ".pdf" %}
+    {% assign name = f.path | split: "/" | last %}
+    <li><a href="proofs/{{ name }}">{{ name }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
 
