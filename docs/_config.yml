@@ -26,13 +26,5 @@ layout: default
 {% endfor %}
 </ul>
 
-## brain
-<ul>
-{% for f in site.static_files %}
-  {% if f.path contains "/docs/brain/" and f.extname == ".pdf" %}
-    {% assign name = f.path | split: "/" | last %}
-    <li><a href="brain/{{ name }}">{{ name }}</a></li>
-  {% endif %}
-{% endfor %}
-</ul>
+
 
